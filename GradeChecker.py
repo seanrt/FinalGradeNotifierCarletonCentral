@@ -35,6 +35,8 @@ while True:
     r = s.post(gradeUrl, data=termData)
     soupTable = BeautifulSoup(r.content, 'html.parser').body.find('div', class_='pagebodydiv').find('table', class_='datadisplaytable').find_next_sibling('table')
     numTR = len(soupTable.find_all('tr'))
+    if numTR < 2:
+        print('No grades yet')
     result = soupTable.find('tr')
     for i in range(1,numTR): # The first tr tag contains the grade table headers, so it is skipped
         result = result.find_next_sibling('tr')
