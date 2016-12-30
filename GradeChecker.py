@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import time
 from datetime import datetime
+import getpass
 
 TIME_DELAY_IN_MINUTES = 5
 loginUrl = 'https://central.carleton.ca/prod/twbkwbis.P_ValLogin'
@@ -13,7 +14,7 @@ termData = {'term_in': '201630'} # This corresponds to Fall 2016
 # This loop gathers login information and breaks once the login is successful
 while True:
     sid = input('Please input your student id (10XXXXXXX): ')
-    pin = input('Please input your PIN: ')
+    pin = getpass.getpass('Please input your PIN: ')
     loginData['sid'] = sid
     loginData['PIN'] = pin
 
