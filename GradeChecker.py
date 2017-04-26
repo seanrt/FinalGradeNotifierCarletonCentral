@@ -9,7 +9,7 @@ loginUrl = 'https://central.carleton.ca/prod/twbkwbis.P_ValLogin'
 gradeUrl = 'https://central.carleton.ca/prod/bwskogrd.P_ViewGrde'
 
 loginData = {}
-termData = {'term_in': '201630'} # This corresponds to Fall 2016
+termData = {'term_in': '201710'} # This corresponds to Winter 2017
 
 # This loop gathers login information and breaks once the login is successful
 while True:
